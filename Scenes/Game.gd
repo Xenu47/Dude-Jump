@@ -50,7 +50,7 @@ func _physics_process(delta):
 		add_score()
 		if camera_moving:
 			for c in self.get_children():
-				if not c is Label:
+				if (not c is Label) and (not c is Control):
 					c.global_position.y += camera_path/camera_time
 			get_node("../TileMap").global_position.y += camera_path/camera_time
 			if camera_remaining_time <= camera_time /2:

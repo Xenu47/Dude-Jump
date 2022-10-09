@@ -56,7 +56,7 @@ func _physics_process(delta):
 	
 	screen_borders()
 	
-	if self.global_position.y > get_viewport_rect().size.y:
+	if self.global_position.y > get_viewport_rect().size.y + 4*48:
 		get_parent().get_parent().game_over()
 	pass
 
