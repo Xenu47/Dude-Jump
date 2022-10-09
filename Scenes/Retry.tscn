@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resources/Fonts/kristenshandBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/Retry.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Img/button.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=13]
+size = 96
+outline_size = 4
+outline_color = Color( 0.584314, 0.137255, 0.137255, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 58
+outline_size = 2
+outline_color = Color( 0, 0, 1, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 365, 106 )
+modulate_color = Color( 0.752941, 0.752941, 0.752941, 1 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+content_margin_top = 8.0
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 365, 106 )
+expand_margin_bottom = 4.0
+modulate_color = Color( 0.615686, 0.615686, 0.615686, 1 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 365, 106 )
+
+[sub_resource type="InputEventKey" id=11]
+physical_scancode = 32
+
+[sub_resource type="ShortCut" id=18]
+shortcut = SubResource( 11 )
+
+[sub_resource type="InputEventKey" id=12]
+physical_scancode = 16777217
+
+[sub_resource type="ShortCut" id=19]
+shortcut = SubResource( 12 )
+
+[node name="Retry" type="Control"]
+pause_mode = 2
+margin_right = 720.0
+margin_bottom = 1080.0
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 720.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( 360, 320 )
+custom_fonts/font = SubResource( 13 )
+text = "Score
+"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = 156.0
+margin_right = 176.0
+margin_bottom = 236.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+enabled_focus_mode = 0
+shortcut = SubResource( 18 )
+text = "Retry"
+
+[node name="Button2" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -168.0
+margin_top = 284.0
+margin_right = 168.0
+margin_bottom = 364.0
+focus_mode = 0
+custom_fonts/font = SubResource( 14 )
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+enabled_focus_mode = 0
+shortcut = SubResource( 19 )
+text = "Main Menu"
